@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+:root{--ink:#293b3a;--muted:#667573;--bg:#faf9f5;--line:#e8e8df;--green:#466b60}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--bg);font-family:Nunito,'Segoe UI',sans-serif;font-size:16px}.wrap{max-width:1100px;margin:auto;padding-left:28px;padding-right:28px}.site-header{border-bottom:1px solid var(--line);background:rgba(250,249,245,.96)}.header-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{text-decoration:none;color:var(--ink);font-weight:900;font-size:24px;letter-spacing:-.7px}.brand:first-letter{color:#be925b}.top-nav{display:flex;gap:25px}.top-nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:800}.top-nav a:hover{color:var(--green)}.hero{position:relative;text-align:center;padding-top:82px;padding-bottom:72px}.hero-sun{position:absolute;left:18%;top:75px;color:#e0b85e;font-size:28px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-weight:900;font-size:11px;color:#a57d53;margin:0 0 15px}.hero h1{font-weight:900;font-size:clamp(38px,6vw,67px);line-height:1.18;letter-spacing:-2px;margin:0}.hero h1 em{font-style:normal;color:#648b7b}.intro{max-width:610px;font-size:17px;line-height:1.8;color:var(--muted);margin:24px auto}.hero-link{display:inline-flex;align-items:center;gap:16px;margin-top:9px;padding:13px 21px;background:var(--green);border-radius:30px;color:white;text-decoration:none;font-weight:900;font-size:14px}.hero-link:hover{background:#34574d}.rooms{padding-bottom:74px}.section-title{text-align:center;margin-bottom:29px}.section-title h2{margin:0;font-size:clamp(25px,3.5vw,36px);letter-spacing:-.6px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.room-card{overflow:hidden;border:1px solid var(--line);border-radius:23px;background:#fff;color:inherit;text-decoration:none;display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease}.room-card[href]:hover{transform:translateY(-4px);box-shadow:0 12px 35px #2d4a3d16}.art{height:225px;overflow:hidden;background:#f0eee6}.art img{display:block;width:100%;height:100%;object-fit:cover}.card-copy{padding:19px 22px 4px;display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex:1}.card-copy h3{font-size:23px;letter-spacing:-.45px;margin:0 0 5px}.card-copy p{color:var(--muted);line-height:1.55;margin:0;font-size:14px}.arrow{width:34px;height:34px;border-radius:50%;background:#eaf1eb;color:#4d7868;display:grid;place-items:center;font-size:20px;flex-shrink:0}.arrow.muted{background:#f2f1ec;color:#b2b2a6;font-size:16px}.hint{font-size:12px;margin:14px 22px 20px;color:#7b9287;font-weight:800}.soon .hint{color:#aa9d90}.note{text-align:center;color:#87918a;font-size:13px;margin:28px auto 0}.site-footer{border-top:1px solid var(--line);color:#8b938d}.site-footer .wrap{padding-top:25px;padding-bottom:25px;display:flex;justify-content:space-between;gap:15px;font-size:12px}.site-footer span:first-child{font-weight:900;color:#67786c}@media(max-width:650px){.wrap{padding-left:18px;padding-right:18px}.header-inner{height:66px}.brand{font-size:21px}.top-nav{gap:12px}.top-nav a{font-size:12px}.hero{padding-top:64px;padding-bottom:56px}.hero-sun{left:8%;top:45px}.intro{font-size:15px}.cards{grid-template-columns:1fr;gap:18px}.art{height:215px}.card-copy h3{font-size:22px}.site-footer .wrap{flex-direction:column;align-items:center;text-align:center}}
+
+/* v2: priority is immediately visible four-section catalogue */
+.header-inner{min-height:70px;height:auto;padding-top:10px;padding-bottom:10px}
+.header-greeting{font-size:14px;color:var(--muted);font-weight:700;margin:0;text-align:right}
+.rooms{padding-top:25px;padding-bottom:44px}
+.section-title{margin-bottom:18px}
+.section-title h1{font-weight:900;font-size:clamp(23px,3vw,31px);letter-spacing:-.5px;margin:0}
+.cards{gap:18px}
+.art{height:165px}
+.card-copy{padding:12px 18px 1px}
+.card-copy h3{font-size:21px;margin-bottom:3px}
+.card-copy p{font-size:13px;line-height:1.35}
+.hint{margin:8px 18px 13px}
+@media(max-width:650px){
+ .header-inner{align-items:flex-start;flex-direction:column;gap:1px;padding-top:10px;padding-bottom:10px}
+ .header-greeting{font-size:12px;text-align:left}
+ .rooms{padding-top:18px}
+ .section-title{margin-bottom:15px}
+ .cards{gap:14px}
+ .art{height:190px}
+}
+
+/* v5: preserve the ENTIRE illustration; never crop images. */
+.art{height:190px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.art img{width:100%;height:100%;object-fit:contain;object-position:center}
+.room-games .art{background:#e6f2e6}
+.room-workshop .art{background:#f5e8df}
+.room-stories .art{background:#e6eff3}
+.room-parents .art{background:#e9ece7}
+@media(min-width:651px){
+ .header-inner{min-height:54px;padding-top:5px;padding-bottom:5px}
+ .rooms{padding-top:13px;padding-bottom:16px}
+ .section-title{margin-bottom:12px}
+ .cards{row-gap:13px;column-gap:18px}
+ .card-copy{padding-top:10px;padding-bottom:0}
+ .hint{margin-top:8px;margin-bottom:12px}
+ .site-footer .wrap{padding-top:10px;padding-bottom:10px}
+}
+@media (min-width:651px) and (max-height:760px){
+ .art{height:165px}
+ .rooms{padding-top:8px;padding-bottom:10px}
+ .section-title{margin-bottom:8px}
+ .cards{row-gap:10px}
+ .hint{margin-top:5px;margin-bottom:9px}
+ .card-copy{padding-top:7px}
+}
+@media(max-width:650px){
+ .art{height:auto;aspect-ratio:3/2}
+ .art img{width:100%;height:100%;object-fit:contain}
+}
