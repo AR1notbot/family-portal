@@ -499,3 +499,9 @@
             break-after: auto;
         }
     }
+
+/* Навігація Family Portal — не друкується разом з аркушами */
+.portal-navigation { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:0 0 10px; }
+.portal-navigation a { display:inline-block; padding:8px 13px; border-radius:10px; border:1px solid #cbd5e1; background:#fff; color:#334155; text-decoration:none; font-weight:700; font-size:14px; }
+.portal-navigation a:hover, .portal-navigation a:focus-visible { background:#fef3c7; border-color:#d97706; }
+@media print { .portal-navigation { display:none !important; } }
